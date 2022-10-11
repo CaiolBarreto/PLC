@@ -1,11 +1,11 @@
 package Semaphore;
 
-public enum Infos {
-    VERDE(1000), AMARELO(300), VERMELHO(2000);
+public enum SemaphoreColor {
+    VERDE(1500), AMARELO(500), VERMELHO(2000);
 
-    private int waitingTime;
+    private final int waitingTime;
 
-    Infos(int waitingTime) {
+    SemaphoreColor(int waitingTime) {
         this.waitingTime = waitingTime;
     }
 

@@ -1,14 +1,20 @@
 package Queue;
 
-
 public class MyRunnable implements Runnable {
+
+    private final Queue queue;
+
+    public MyRunnable(Queue queue) {
+        this.queue = queue;
+    }
 
     @Override
     public void run() {
-        System.out.println("teste");
-    }
+        String name = Thread.currentThread().getName();
 
-    public void print() {
-        System.out.println("testando muito aqui");
+        for (int i = 0; i < 5; i++) {
+            queue.queueEnqueue(i);
+            System.out.println("A thread " + name + " está colocando " + i);
+        }
     }
 }

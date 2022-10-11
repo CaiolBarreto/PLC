@@ -1,6 +1,6 @@
 package Queue;
 
-public class QueueImplementation {
+public class Queue {
     private static int front, rear, capacity;
     private static int[] queue;
 
